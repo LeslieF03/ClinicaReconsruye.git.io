@@ -4,36 +4,44 @@
         background-image: url("../IMG/Fondo.png");
         background-size: cover;
         margin: 0;
-        padding: 0;
+        padding: 3%;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        animation: moverFondo 10s ease-in-out infinite alternate;
     }
-    
+    @keyframes moverFondo{
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 100% 100%;
+        }
+    }
     .titulo {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
         padding-inline: 2%;
-        height: 180px;
+        height: 15vw;
         background-color: #f9fffd;
-        border-top-left-radius: 20px;
+        border-top-left-radius: 20%;
         border-bottom-left-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     }
     
     .titulo h2 {
-        font-size: 18px;
+        font-size: 3vw;
         color: #192221;
         margin-inline: 5px;
     }
     
     .Formulario {
         background-color: rgb(201, 231, 223);
-        padding: 20px;
+        padding: 2.3%;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         width: 100%;
@@ -41,12 +49,11 @@
     }
     
     .item {
-        margin-bottom: 15px;
+        margin-bottom: 4%;
     }
-    
     p {
         margin: 0 0 5px 0;
-        font-size: 14px;
+        font-size: 1vw;
         color:rgb(16, 88, 76); ;
     }
     
@@ -58,10 +65,13 @@
         font-size: 14px;
         box-sizing: border-box;
     }
-    
     .item input:focus {
         border-color: rgb(16, 88, 76); ;
         outline: none;
+    }
+
+    .item input:hover{
+        box-shadow:0 0 5px rgba(5, 91, 52, 0.1)
     }
     .botones{
         display: flex;
@@ -82,8 +92,9 @@
     }
     .boton:hover{
         color:rgb(16, 88, 76);
-        background-color: #fff;
-    }
+        background-color: #ffffff;
+        box-shadow:0 0 5px rgba(22, 214, 128, 0.7)
+    }S
     select{
         border-color: transparent;
         border-radius: 5px;

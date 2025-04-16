@@ -2,17 +2,28 @@ body{
     background-color: rgb(219, 255, 245);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 header{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 1)), 
-                url('/img/Fondo.png'); /* Ruta de tu imagen */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 1)),url('/img/Fondo.png'); 
     background-size: cover; /* La imagen cubre toda la superficie */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que se repita */
     padding-top: 10%;
     margin-bottom: 2%;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    animation: moverFondo 15s ease-in-out infinite alternate;
 }
+
+@keyframes moverFondo{
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
 .titulo{
     background-color: rgb(75, 165, 150);
     align-content: center;
@@ -76,6 +87,7 @@ header{
 }
 
 .carrusel{
+    position: relative;
     height:30vw ;
     display: flex;
     justify-content:space-around;
@@ -90,7 +102,6 @@ header{
     height: 100%;
     flex:  0 0 100%;
     animation: slide 6s infinite;
-    
     text-align: center;
     align-self: center;
 }
@@ -140,11 +151,12 @@ header{
 .Menu2{
     padding:0;
     margin: 0; 
-    background-color: rgb(28, 123, 107);
+    background-color:rgb(28, 123, 107);
     display: flex;
     justify-content: space-around;
     align-items:center;
     height: 10vw;
+    box-shadow: 10px 5px 15px 10px rgb(1, 1, 1,0.3);
 }
 
 .Menu2 ul {
@@ -181,6 +193,12 @@ main h2{
     font-size: 4vw;
     color: rgb(9, 76, 65);
 }
+main{
+    background-size: cover;
+    background-repeat:no-repeat;
+    background: url('/img/Fondo.png');
+    padding-bottom: 2vw;
+}
 main p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2vw;
@@ -198,7 +216,8 @@ main p{
 }
 
 .ficha{
-    background-color: rgb(201, 240, 229);
+    background: rgba(198, 224, 210, 0.1); /* Color translúcido */
+    backdrop-filter: blur(15px); /* Aplica desenfoque */
     border-radius: 5vw;
     padding: 1%;
     padding-top: 5px;

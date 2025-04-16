@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="../CSS/Forms.css">
+    <script src="/javascript/ValidacionLogin.js"></script>
 </head>
 <body>
     <div class="titulo">
         <img src="../img/User2_Icon.png" height="35px" style="margin-right:20px;">
         <h2>Inicio de Sesión</h2>
     </div>
-
     <div class="Formulario">
-        <form>
+        <form id="loginForm">
             <div class="item">
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="usuario" required placeholder="Escriba su usuario" minlength="3" maxlength="50">
             </div>
-
             <div class="item">
                 <label for="contraseña">Contraseña:</label>
                 <input type="password" id="contraseña" name="contraseña" required placeholder="Escriba su contraseña" minlength="10" maxlength="50">
             </div>
-
             <div class="botones">
                 <input type="submit" value="Enviar" class="boton">
                 <input type="reset" value="Restablecer" class="boton">

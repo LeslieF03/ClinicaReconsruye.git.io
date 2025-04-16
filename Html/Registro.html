@@ -4,40 +4,35 @@
     <meta charset="UTF-8">
     <title>Crear Cuenta</title>
     <link rel="stylesheet" href="../CSS/Forms.css">
+    <script src="/javascript/validacion.js"></script>
 </head>
 <body>
     <div class="titulo">
         <img src="../img/newUser_Icon.png" height="35px" style="margin-right:20px;">
-        <h2>REGISTRSE ¡GRATIS!</h2>
+        <h2>REGÍSTRESE ¡GRATIS!</h2>
     </div>
     <div class="Formulario">
-        <form>
+        <form id="registroForm">
             <div class="item">
                 <label for="nombre">Nombre Completo:</label>
                 <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre" minlength="3" maxlength="50">
             </div>
-
             <div class="item">
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="usuario" required placeholder="Escriba su usuario" minlength="3" maxlength="50">
             </div>
-
             <div class="item">
                 <label for="contraseña">Contraseña:</label>
                 <input type="password" id="contraseña" name="contraseña" required placeholder="Escriba su contraseña" minlength="10" maxlength="50">
             </div>
-
             <div class="item">
                 <label for="correo">Correo:</label>
                 <input type="email" id="correo" name="correo" required placeholder="Escriba su correo">
             </div>
-
             <div class="item">
                 <label for="telefono">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono" required placeholder="Escriba su teléfono celular" pattern="[0-9]{10}">
             </div>
-
-
             <div class="botones">
                 <input type="submit" value="Enviar" class="boton">
                 <input type="reset" value="Restablecer" class="boton">
