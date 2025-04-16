@@ -216,8 +216,8 @@ main p{
 }
 
 .ficha{
-    background: rgba(198, 224, 210, 0.1); /* Color translúcido */
-    backdrop-filter: blur(15px); /* Aplica desenfoque */
+    background: rgba(198, 224, 210, 0.1);
+    backdrop-filter: blur(15px);
     border-radius: 5vw;
     padding: 1%;
     padding-top: 5px;

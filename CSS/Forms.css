@@ -1,6 +1,6 @@
 
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Times New Roman', Times, serif;
         background-image: url("../IMG/Fondo.png");
         background-size: cover;
         margin: 0;
@@ -25,17 +25,18 @@
         justify-content: center;
         margin-bottom: 20px;
         padding-inline: 2%;
-        height: 15vw;
-        background-color: #f9fffd;
+        min-height: 15vw;
+        max-height: 25vw;
+        background: rgba(198, 224, 210, 0.5);
+        backdrop-filter: blur(15px);
         border-top-left-radius: 20%;
         border-bottom-left-radius: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     }
     
     .titulo h2 {
-        font-size: 3vw;
-        color: #192221;
+        font-size: 18px;
+        color: #2c3938;
         margin-inline: 5px;
     }
     
