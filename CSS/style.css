@@ -1,14 +1,16 @@
 body{
-    background-color: rgb(219, 255, 245);
+    background-color:  rgb(219, 255, 245);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(255, 255, 255, 1)),url('../img/Fondo.png'); 
-    background-size: cover; /* La imagen cubre toda la superficie */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que se repita */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     padding-top: 10%;
     margin-bottom: 2%;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
@@ -44,10 +46,11 @@ header{
 .titulo .Enc h1{    
     font-family: 'Courier New', Courier, monospace;
     margin-left: 3.5%;
-    font-size:3.5vw;
+    font-size:3.7vw;
     align-self: center;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
+
 .info{
     background-color: rgb(106, 199, 184);
     padding:0;
@@ -86,31 +89,31 @@ header{
     
 }
 
-.carrusel{
-    position: relative;
-    height:30vw ;
+.carrusel {
     display: flex;
-    justify-content:space-around;
-    align-content: center;
-    background-color: aliceblue;
+    overflow: hidden;
+    height: 30vw;
+    width: 100%;
+    position: relative;
 }
 
-.carrusel .imagebox{
-    width: 100%;
+.imagebox {
     background-position: center;
     background-size: cover;
-    height: 100%;
-    flex:  0 0 100%;
-    animation: slide 6s infinite;
-    text-align: center;
-    align-self: center;
+    min-width: 100%;
 }
+
+.imagebox.active {
+    display: block;
+}
+
 
 @keyframes slide {
     0%, 33% { transform: translateX(0%); }
     34%, 66% { transform: translateX(-100%); }
     67%, 100% { transform: translateX(-200%); }
 }
+
 
 .Menu{
     padding:0;
@@ -127,10 +130,10 @@ header{
     align-content: center;
     justify-content: space-between; 
     list-style: none;
-    width: 85%; 
+    width: 95%; 
     padding:0;
     margin: 0;
-    font-size: 1.8vw;
+    font-size: 2.4vw;
 }
 .Menu a{
     color: black;
@@ -201,7 +204,7 @@ main{
 }
 main p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2vw;
+    font-size: 2vw;
     text-align: justify;
     padding-inline: 10%;
     line-height: 2;

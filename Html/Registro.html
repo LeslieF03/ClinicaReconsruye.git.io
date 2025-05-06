@@ -4,27 +4,45 @@
     <meta charset="UTF-8">
     <title>Crear Cuenta</title>
     <link rel="stylesheet" href="../CSS/Forms.css">
-    <script src="/javascript/validacion.js"></script>
+    <script src="../javascript/validacion.js"></script>
 </head>
 <body>
-    <div class="titulo">
+    <div class="titulo" style="min-height: 40vw;">
         <img src="../img/newUser_Icon.png" height="35px" style="margin-right:20px;">
-        <h2>REGÍSTRESE ¡GRATIS!</h2>
+        <h2>¡Regístrate!</h2>
     </div>
     <div class="Formulario">
-        <form id="registroForm">
+        <form id="registroForm" name="Registro" method="post" action="../PHP/conexionCrearUsuario.php">
             <div class="item">
-                <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre" minlength="3" maxlength="50">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre" minlength="3" maxlength="50" >
             </div>
             <div class="item">
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required placeholder="Escriba su usuario" minlength="3" maxlength="50">
+                <label for="apellidoP">Primer Apellido:</label>
+                <input type="text" id="apellidoP" name="apellidoP" required placeholder="Escriba su apellido paterno" minlength="3" maxlength="50">
             </div>
             <div class="item">
-                <label for="contraseña">Contraseña:</label>
-                <input type="password" id="contraseña" name="contraseña" required placeholder="Escriba su contraseña" minlength="10" maxlength="50">
+                <label for="apellidoM">Segundo Apellido:</label>
+                <input type="text" id="apellidom" name="apellidoM" placeholder="Escriba su apellido materno" minlength="3" maxlength="50">
             </div>
+            <div class="item">
+                <label for="Genero">Genero:</label>
+                <select id="genero" class="selector"  name="GeneroPersona" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input type="date" id="fecha" name="fecha" required placeholder="Escriba su fecha de nacimiento">
+            </div>
+            <div class="item">
+                <label for="curp">CURP:</label>
+                <input type="text" id="curp" name="curp" required placeholder="Escriba su CURP" minlength="18" maxlength="18">
+            </div>
+            
             <div class="item">
                 <label for="correo">Correo:</label>
                 <input type="email" id="correo" name="correo" required placeholder="Escriba su correo">
@@ -32,6 +50,14 @@
             <div class="item">
                 <label for="telefono">Teléfono:</label>
                 <input type="tel" id="telefono" name="telefono" required placeholder="Escriba su teléfono celular" pattern="[0-9]{10}">
+            </div>
+            <div class="item">
+                <label for="telefono2">Teléfono alternativo(Opcional):</label>
+                <input type="tel" id="telefono2" name="telefono2"  placeholder="Escriba su  segundo teléfono" pattern="[0-9]{10}">
+            </div>
+            <div class="item">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required placeholder="Escriba su contraseña" minlength="10" maxlength="50">
             </div>
             <div class="botones">
                 <input type="submit" value="Enviar" class="boton">

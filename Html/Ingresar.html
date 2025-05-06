@@ -12,9 +12,9 @@
         <h2>Inicio de Sesión</h2>
     </div>
     <div class="Formulario">
-        <form id="loginForm">
+        <form id="loginForm" method="post" action="../PHP/conexionSesion.php">
             <div class="item">
-                <label for="usuario">Usuario:</label>
+                <label for="usuario_Correo">CURP:</label>
                 <input type="text" id="usuario" name="usuario" required placeholder="Escriba su usuario" minlength="3" maxlength="50">
             </div>
             <div class="item">
